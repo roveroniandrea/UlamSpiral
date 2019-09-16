@@ -19,3 +19,5 @@ In addition to this, a simple check to **perfect squares** has been added to avo
 Other sources:
 
 See Andrew Thivyanathan's answer on this question on Quora: [Is every prime number other than 2 and 3 of the form (6k±1)? Is this a proven result? What are other resources about it?](https://www.quora.com/Is-every-prime-number-other-than-2-and-3-of-the-form-6k%C2%B11-Is-this-a-proven-result-What-are-other-resources-about-it)
+
+Inpiration taken from introduction to "*Esercizi di Matematica per il test di accesso a Informatica*" by *L. Gemignani* and *O. Menchi*, A.A. 2015-2016
