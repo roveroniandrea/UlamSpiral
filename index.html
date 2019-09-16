@@ -12,6 +12,8 @@
     <!--return false added to prevent page reload-->
     <form onsubmit="drawSpiral();return false">
         <p>Spiral goes from 1 to : <input type="number" id="input_testToNumber" value="10000"></p>
+        <p>Note, for values less than 500 spiral gets generated slower to better see the process</p>
+        <p>The red points it's the start of the spiral, corresponding to value 1</p>
         <p>Set scale: <input type="number" step="0.01" id="input_scale" value="1"></p>
         <button type="submit">Draw spiral</button>
     </form>

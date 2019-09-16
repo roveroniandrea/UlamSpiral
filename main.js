@@ -15,6 +15,8 @@ let drawPointAt = {
     y: canvasHeight / 2
 }
 
+let allTimeouts = [];
+
 function setup() {
     createCanvas(canvasWidth, canvasHeight);
     background(204);
@@ -41,46 +43,55 @@ function drawSpiral() {
     background(204);
     //get max number inserted in input
     testToNumber = getTestToNumber();
+    //clear all timeouts
+    allTimeouts.forEach(timeout => clearTimeout(timeout));
+    allTimeouts = [];
 
     for (let n = 1; n <= testToNumber; n++) {
-        //move point to dar according to spiral direction and choosen distance
-        if (n != 1) {
-            drawPointAt.x += distanceBetweenPoints * Math.cos(spiralDirection * Math.PI / 180);
-            drawPointAt.y -= distanceBetweenPoints * Math.sin(spiralDirection * Math.PI / 180);
+        let timeoutMillis = 10 * (n - 1);
+        if(testToNumber > 500){
+            timeoutMillis = 1 * (n - 1)
         }
-        let pointColor = color('white');
-        // if primal draw a black point
-        if (testIfPrimal(n)) {
-            pointColor = color('black');
-        }
-        //if n=1 set another color, just to enlight the center
-        if (n == 1) {
-            pointColor = color('red');
-        }
-        //set choosen color
-        fill(pointColor);
-        noStroke();
-        //draw the point
-        ellipse(drawPointAt.x, drawPointAt.y, pointRadius, pointRadius);
+        allTimeouts.push(setTimeout(() => {
+            //move point to dar according to spiral direction and choosen distance
+            if (n != 1) {
+                drawPointAt.x += distanceBetweenPoints * Math.cos(spiralDirection * Math.PI / 180);
+                drawPointAt.y -= distanceBetweenPoints * Math.sin(spiralDirection * Math.PI / 180);
+            }
+            let pointColor = color('white');
+            // if primal draw a black point
+            if (testIfPrimal(n)) {
+                pointColor = color('black');
+            }
+            //if n=1 set another color, just to enlight the center
+            if (n == 1) {
+                pointColor = color('red');
+            }
+            //set choosen color
+            fill(pointColor);
+            noStroke();
+            //draw the point
+            ellipse(drawPointAt.x, drawPointAt.y, pointRadius, pointRadius);
 
-        //increase number of points in this line
-        numbersOnLine++;
-        //change spiral direction anti-clockwise if reached target number of points in this line
-        if (numbersOnLine == lineLenght) {
-            numbersOnLine = 0;
-            spiralDirection += 90;
-            //check if >=360
-            if (spiralDirection >= 360) {
-                spiralDirection -= 360;
+            //increase number of points in this line
+            numbersOnLine++;
+            //change spiral direction anti-clockwise if reached target number of points in this line
+            if (numbersOnLine == lineLenght) {
+                numbersOnLine = 0;
+                spiralDirection += 90;
+                //check if >=360
+                if (spiralDirection >= 360) {
+                    spiralDirection -= 360;
+                }
+                //increase total number of lines drawed
+                howManyLines++;
+                //every two lines add 1 to lineLinenght
+                if (howManyLines % 2 == 0) {
+                    lineLenght++;
+                }
+                numbersOnLine = 1;
             }
-            //increase total number of lines drawed
-            howManyLines++;
-            //every two lines add 1 to lineLinenght
-            if (howManyLines % 2 == 0) {
-                lineLenght++;
-            }
-            numbersOnLine = 1;
-        }
+        }, timeoutMillis));
     }
 }
 
