@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ulam's spiral visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <!--return false added to prevent page reload-->
+    <form onsubmit="drawSpiral();return false">
+        <p>Spiral goes from 1 to : <input type="number" id="input_testToNumber" value="10000"></p>
+        <p>Set scale: <input type="number" step="0.01" id="input_scale" value="1"></p>
+        <button type="submit">Draw spiral</button>
+    </form>
+    <br>
+</body>
+</html>
