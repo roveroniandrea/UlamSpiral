@@ -1,6 +1,8 @@
 # UlamSpiral
 Visualization of Ulam's spiral about primal numbers
 
+# [Demo](https://roveroniandrea.github.io/UlamSpiral/)
+
 # How to use
 Simply choose the max number to test and canvas scale (Note that external points will still be calculated)
 
