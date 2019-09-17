@@ -53,7 +53,7 @@ In this code the expression `6 * k + 5` is used, but in another form. Simply, it
 `6 * k + 1`
 
 ## Why 6?
-Why we choose to divide numbers by group of 6? First of all, 6 is a number relatively small, so in the wors case only 6 expression have to be checked. In addition to this, 6 is a multiple of both 2 and 3, which makes easier to exclude some expressions (like +0, +2, +3 and +4), and the remaining are only two (this is very efficient for the code), and further controls with the traditional algorithm is necessary at small percentage. In addition, grouping number by 6 makes easier to obtain higher numbers among grouping b 2 or 3. The next possible number to group is, in my opinion, 30, because it's the least common multple between 2, 3 and 5, but I think the number of expression to check would be higher (I've not tested it anyway).
+Why we choose to divide numbers by groups of 6? First of all, 6 is a number relatively small, so in the worst case only 6 expressions have to be checked. In addition to this, 6 is a multiple of both 2 and 3, which makes easier to exclude some expressions (like +0, +2, +3 and +4), and the remaining are only two (this is very efficient for the code), and further controls with the traditional algorithm is necessary at small percentage. In addition, grouping number by 6 makes easier to obtain higher numbers among grouping by 2 or 3. The next possible number to group is, in my opinion, 30, because it's the least common multple between 2, 3 and 5, but I think the number of expressions to check would be higher (I've not tested it anyway).
 
 ## Sources:
 
