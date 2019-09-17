@@ -7,7 +7,7 @@ Visualization of Ulam's spiral about primal numbers
 Simply choose the max number to test and canvas scale (Note that external points will still be calculated)
 
 # How it works
-Ulam's spiral it's a simple representation of primal numbers arranged in a spiral. If a number is primal it will be printed in black, otherwise in white. The most interesting thing is that primal numbers tend to align in diagonals. This is clearly observable drawing the spiral with default values in the Demo. Other algorithms have confirmed that the density of primal numbers in diagonals is not constant. This behaviour is not yet totally understood.
+Ulam's spiral it's a simple representation of primal numbers arranged in a spiral. If a number is primal it will be printed in black, otherwise in white. The most interesting thing is that primal numbers tend to align in diagonals. This is clearly observable by drawing the spiral with default values in the Demo. Other algorithms have confirmed that the density of primal numbers in diagonals is not constant. This behaviour is not yet totally understood.
 
 
 The algorithm to check if a number if primal works in the following way:
