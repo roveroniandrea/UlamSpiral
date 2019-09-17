@@ -10,7 +10,7 @@ Simply choose the max number to test and canvas scale (Note that external points
 Ulam's spiral it's a simple representation of primal numbers disposed in a spiral. If a number is primal it will be printed in black, otherwise in white.
 The algorithm to check if a number if primal works in the following way:
 
-Let's suppose we want to describe all numbers multiple of 6. We will later discuss why precisely 6. We can obtain those numbers simply doing 6 * k, where k is an interger number greater or equal to 1.
+Let's suppose we want to describe all numbers multiple of 6. We will later discuss why precisely 6 [In this section](https://github.com/roveroniandrea/UlamSpiral/blob/master/README.md#why-6). We can obtain those numbers simply doing 6 * k, where k is an interger number greater or equal to 1.
 
 Some examples are:
 `6 * 1 = 6` for k=1, `6 * 2 = 12` for k=2, `6 * 3 = 18` for k=3, and so on.
