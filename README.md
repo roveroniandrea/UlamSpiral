@@ -24,7 +24,7 @@ To obtain numbers between them we can simply add 1, 2, 3, 4 or 5 to them. Genera
 
 Let's start with the easiest expression: `6 * k + 0`. If we divide this number by 2 we obtain `(6 * k + 0) / 2 = 3 * k`, which is an integer number (remember that k is always integer). So, **the quotient of the division is always an integer, and so all numbers that can be obtained by `6 * k + 0` are certainly not primal** and we can exclude them (they're also divisible by 3).
 
-The same approach can be used to exclude `6 * k + 2` and `6 * k + 3` cases: the first can be divided by 2, because they're always pair (in fact multiplicating any number with a pair number you get a pair one), while the second are multiple of 3: `(6 * k + 3) / 3 = 2 * k + 1`. Also the `6 * k + 4` case has to be excluded because you always get pair numbers.
+The same approach can be used to exclude `6 * k + 2` and `6 * k + 3` cases: the first can be divided by 2, because they're always even (in fact multiplicating any number with an even number you get an even one), while the second are multiple of 3: `(6 * k + 3) / 3 = 2 * k + 1`. Also the `6 * k + 4` case has to be excluded because you always get even numbers.
 
 **The remaing two expressions are `6 * k + 1` and `6 * k + 5`. Both of them are not divided by 2 or 3 because the result is never an integer:**
 
@@ -66,4 +66,4 @@ See Andrew Thivyanathan's answer on this question on Quora: [Is every prime numb
 
 Inpiration taken from introduction to "*Esercizi di Matematica per il test di accesso a Informatica*" by *L. Gemignani* and *O. Menchi*, A.A. 2015-2016
 
-**Code written by Andrea Roveroni, feel free to re-use it**
+**Code written by Andrea Roveroni**
